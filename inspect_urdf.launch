@@ -1,9 +1,9 @@
 <launch>
 	<!-- When calling the launch file you can provide the .urdf file that you want to look at as a parameter.
-	Example: roslaunch bear_manipulator_description inspect_urdf.launch model:='$(find bear_manipulator_description)/urdf/bear_manipulator_and_gripper.urdf' -->
+	Example: roslaunch your_pkg_name inspect_urdf.launch model:='$(find your_pkg_name)/path/to/your_urdf.urdf' -->
 	
-	<arg name="model" default="$(find bear_manipulator_description)/urdf/bear_manipulator_and_gripper.urdf.xacro"/>
-	<arg name="rvizconfig" default="$(find bear_manipulator_description)/rviz/urdf.rviz" />
+	<arg name="model" default="$(find your_pkg_name)/path/to/your_urdf.urdf"/>
+	<arg name="rvizconfig" default="$(find your_pkg_name)/rviz/urdf.rviz" />
 	
 	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
 
